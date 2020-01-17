@@ -1,0 +1,13 @@
+<h1>Dog form</h1>
+<p> Added new dogs</p>
+<ul>
+  <li *ngFor="let dog of dogs">{{ dog.name }}</li>
+</ul>
+<form #f="ngForm" (ngSubmit)="onSubmit(f)">
+  <label for="name">Enter Dog</label>
+  <input type="text" id="name" name="name" ngModel/>
+  <br>
+  <button>Submit</button>
+  <button type="reset">Reset</button>
+
+</form>
